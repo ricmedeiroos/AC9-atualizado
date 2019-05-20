@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    {{ titulo }}
+{% endblock titulo %}
+
+{% block scripts %}
+    {{ form.media }}
+{% endblock %}
+
+{% block main %}
+<h1 class="text-center">
+    {{ titulo }}
+</h1>
+<form method="POST">
+    <div class="alert alert-primary" role="alert">
+        Não possui atividades cadastradas? Clique <a href="{% url 'restrito:atividade_form' %}?next={{ request.path|urlencode }}" class="alert-link">aqui</a> para incluir uma nova atividade.
+    </div>
+    {% include "includes/form-group.html" with form=form %}
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+</form>
+{% endblock main %}

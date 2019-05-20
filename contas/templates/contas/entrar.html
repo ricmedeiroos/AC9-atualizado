@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Entrar
+{% endblock %}
+
+{% block main %}
+<form method="POST" novalidate>
+    <h1>Entrar</h1>
+    {% include "includes/form-group.html" with form=form %}
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+
+</form>
+{% endblock main %}

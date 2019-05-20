@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    Inscrever
+{% endblock %}
+
+{% block main %}
+<form method="POST" novalidate>
+    <h1>Vire nosso aluno!</h1>
+    {% include "includes/form-group.html" with form=form %}
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Inscrever</button>
+    </div>
+
+</form>
+{% endblock main %}
